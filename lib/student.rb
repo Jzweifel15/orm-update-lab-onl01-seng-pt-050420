@@ -39,6 +39,10 @@ class Student
     student
   end
   
+  def self.new_from_db(array)
+    
+  end
+  
   def update
     sql = <<-SQL
       UPDATE students SET name = ?, grade = ?
