@@ -39,10 +39,12 @@ class Student
     student
   end
   
-  def self.new_from_db(array)
-    student = self.new(array[0], array[1], array[2])
-    student
-  end
+  def self.new_from_db(row)
+    id = row[0]
+    name = row[1]
+    grade = row[2]
+    self.new(id, name, grade)
+  end 
   
   def update
     sql = <<-SQL
